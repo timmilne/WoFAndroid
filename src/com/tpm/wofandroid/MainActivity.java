@@ -16,9 +16,9 @@ import android.view.ViewGroup;
 
 public class MainActivity extends Activity implements OnPreparedListener, MediaController.MediaPlayerControl {
 	
-	private MediaPlayer mMediaPlayer;
-	private MediaController mMediaController;
-	private Handler mHandler;
+	private MediaPlayer 	mMediaPlayer;
+	private MediaController	mMediaController;
+	private Handler 		mHandler;
 	
 	// Set up a hashmap to map of view ids to sounds
 	protected Hashtable<Integer, Integer> mSoundsHashtable = new Hashtable<Integer, Integer>();
@@ -79,9 +79,25 @@ public class MainActivity extends Activity implements OnPreparedListener, MediaC
     
     public void handler(View v) {
 
-    	// Get the sound
+    	// Get and play the associated the sound
     	Integer soundID = mSoundsHashtable.get(v.getId());
     	if (soundID != null) playSound(soundID);
+    	
+    	// If end of round, after the ding, play the applause and start up the theme music
+    	if (v.getId() == R.id.button_puzzle_solved)
+    	{
+    		try {
+    			Thread.sleep(2000);
+    		}
+    		catch (InterruptedException IE) {} // Interrupted, proceed
+    		playSound (R.raw.wof_applause);
+    		
+    		try {
+    			Thread.sleep(3400);
+    		}
+    		catch (InterruptedException IE) {} // Interrupted, proceed
+    		playSound (R.raw.wof_theme);
+    	}
     }
     
     public void playSound (Integer soundID) {
