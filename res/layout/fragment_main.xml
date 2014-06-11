@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.tpm.wofandroid.MainActivity$PlaceholderFragment" >
+
+    <Button
+        android:id="@+id/button_new_round"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="handler"
+        android:text="@string/new_round" />
+
+    <Button
+        android:id="@+id/button_ding"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_new_round"
+        android:layout_alignRight="@+id/button_new_round"
+        android:layout_below="@+id/button_new_round"
+        android:onClick="handler"
+        android:text="@string/ding" />
+
+    <Button
+        android:id="@+id/button_buzz"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_new_round"
+        android:layout_alignRight="@+id/button_new_round"
+        android:layout_below="@+id/button_ding"
+        android:onClick="handler"
+        android:text="@string/buzz" />
+
+    <Button
+        android:id="@+id/button_puzzle_solved"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_new_round"
+        android:layout_alignRight="@+id/button_new_round"
+        android:layout_below="@+id/button_buzz"
+        android:onClick="handler"
+        android:text="@string/puzzle_solved" />
+
+    <Button
+        android:id="@+id/button_applause"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_new_round"
+        android:layout_alignRight="@+id/button_new_round"
+        android:layout_below="@+id/button_puzzle_solved"
+        android:onClick="handler"
+        android:text="@string/applause" />
+
+    <Button
+        android:id="@+id/button_final_spin"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_new_round"
+        android:layout_alignRight="@+id/button_new_round"
+        android:layout_below="@+id/button_applause"
+        android:onClick="handler"
+        android:text="@string/final_spin" />
+
+    <Button
+        android:id="@+id/button_double_buzz"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_new_round"
+        android:layout_alignRight="@+id/button_new_round"
+        android:layout_below="@+id/button_final_spin"
+        android:onClick="handler"
+        android:text="@string/double_buzz" />
+
+    <Button
+        android:id="@+id/button_theme"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_new_round"
+        android:layout_alignRight="@+id/button_new_round"
+        android:layout_below="@+id/button_double_buzz"
+        android:onClick="handler"
+        android:text="@string/theme" />
+
+    <MediaController
+        android:id="@+id/media_controller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_new_round"
+        android:layout_alignRight="@+id/button_new_round"
+        android:layout_below="@+id/button_theme" >
+
+    </MediaController>
+
+</RelativeLayout>

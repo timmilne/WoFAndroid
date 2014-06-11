@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WoFAndroid</string>
+    <string name="action_settings">Settings</string>
+    <string name="new_round">New Round</string>
+    <string name="ding">Ding</string>
+    <string name="buzz">Buzz</string>
+    <string name="puzzle_solved">Puzzle Solved</string>
+    <string name="applause">Applause</string>
+    <string name="final_spin">Final Sping</string>
+    <string name="double_buzz">Double Buzz</string>
+    <string name="theme">Theme</string>
+
+</resources>
